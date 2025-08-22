@@ -1,0 +1,14 @@
+{
+    "compilerOptions": {
+      "target": "ES2019",          // 编译目标 JS 版本
+      "module": "CommonJS",        // 模块规范，npm 库用 CommonJS 或 ESNext
+      "declaration": true,         // 生成类型声明文件 .d.ts
+      "outDir": "dist",            // 编译输出目录
+      "strict": true,              // 开启严格模式（推荐）
+      "esModuleInterop": true,     // 允许默认导入 CommonJS 模块
+      "forceConsistentCasingInFileNames": true,
+      "skipLibCheck": true
+    },
+    "include": ["src/**/*"],       // 要编译的文件
+    "exclude": ["node_modules", "dist"]
+  }

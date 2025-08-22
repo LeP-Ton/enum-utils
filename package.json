@@ -1,0 +1,25 @@
+{
+  "name": "enum-utils",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LeP-Ton/enum-utils.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LeP-Ton/enum-utils/issues"
+  },
+  "homepage": "https://github.com/LeP-Ton/enum-utils#readme",
+  "devDependencies": {
+    "typescript": "^5.9.2"
+  }
+}
