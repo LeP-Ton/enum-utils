@@ -4,12 +4,12 @@
 
 ## 功能列表
 
-- [enumToKeyValueArr](file:///Users/didi/Documents/program/enum-utils/src/index.ts#L7-L17) - 将枚举转换为键值对数组
-- [enumToBiMap](file:///Users/didi/Documents/program/enum-utils/src/index.ts#L24-L36) - 将枚举转换为双向映射对象
-- [enumToValueArr](file:///Users/didi/Documents/program/enum-utils/src/index.ts#L43-L49) - 提取枚举的所有值组成数组
-- [enumToKeyArr](file:///Users/didi/Documents/program/enum-utils/src/index.ts#L54-L58) - 提取枚举的所有键（排除反向映射）
-- [isEnumValue](file:///Users/didi/Documents/program/enum-utils/src/index.ts#L63-L68) - 判断某个值是否是枚举的有效值
-- [getEnumKeyByValue](file:///Users/didi/Documents/program/enum-utils/src/index.ts#L73-L78) - 根据枚举值查找对应的键
+- [enumToKeyValueArr] - 将枚举转换为键值对数组
+- [enumToBiMap] - 将枚举转换为双向映射对象
+- [enumToValueArr] - 提取枚举的所有值组成数组
+- [enumToKeyArr] - 提取枚举的所有键（排除反向映射）
+- [isEnumValue] - 判断某个值是否是枚举的有效值
+- [getEnumKeyByValue] - 根据枚举值查找对应的键
 
 ## API 说明
 
