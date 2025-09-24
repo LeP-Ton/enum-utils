@@ -10,6 +10,8 @@
 - [enumToKeyArr] - 提取枚举的所有键（排除反向映射）
 - [isEnumValue] - 判断某个值是否是枚举的有效值
 - [getEnumKeyByValue] - 根据枚举值查找对应的键
+- [enumFilterValuesByKey] - 按 key 的正则筛选枚举的 value 数组
+- [enumFilterKeysByValue] - 按 value 的正则筛选枚举的 key 数组
 
 ## API 说明
 
@@ -124,3 +126,44 @@ enum Status {
 getEnumKeyByValue(Status, 'ACTIVE'); // 'Active'
 getEnumKeyByValue(Status, 'UNKNOWN'); // null
 ```
+
+### `enumFilterValuesByKey`
+
+根据枚举键正则过滤枚举值。
+
+**参数:**
+- `e`: 枚举对象
+- `regex`: key的正则表达式
+
+**示例:**
+```ts
+enum Status {
+  Active_1 = 'ACTIVE_1',
+  Active_2 = 'ACTIVE_2',
+  Inactive_1 = 'INACTIVE_1',
+  Inactive_2 = 'INACTIVE_2',
+}
+
+enumFilterValuesByKey(Status, /^Active/); // ['ACTIVE_1', 'ACTIVE_2']
+enumFilterValuesByKey(Status, /^UNKNOWN/); // []
+```
+
+### `enumFilterKeysByValue`
+
+根据枚举值正则过滤枚举键。
+
+**参数:**
+- `e`: 枚举对象
+- `regex`: value的正则表达式
+
+**示例:**
+```ts
+enum Status {
+  Active_1 = 'ACTIVE_1',
+  Active_2 = 'ACTIVE_2',
+  Inactive_1 = 'INACTIVE_1',
+  Inactive_2 = 'INACTIVE_2',
+}
+
+enumFilterKeysByValue(Status, /^ACTIVE/); // ['Active_1', 'Active_2']
+enumFilterKeysByValue(Status, /^UNKNOWN/); // []

@@ -77,3 +77,34 @@ export const getEnumKeyByValue = <T extends Record<string, string | number>>(
 ) => {
   return Object.entries(e).find(([, v]) => v === value)?.[0] ?? null;
 };
+
+/**
+ * 按 key 的正则筛选枚举的 value 数组
+ */
+export const enumFilterValuesByKey = <
+  T extends Record<string, string | number>
+>(
+  e: T,
+  regex: RegExp
+): (string | number)[] => {
+  return Object.entries(e)
+    .filter(([key]) => isNaN(Number(key)) && regex.test(key))
+    .map(([, value]) => value);
+};
+
+/**
+ * 按 value 的正则筛选枚举的 key 数组
+ */
+export const enumFilterKeysByValue = <
+  T extends Record<string, string | number>
+>(
+  e: T,
+  regex: RegExp
+): string[] => {
+  return Object.entries(e)
+    .filter(
+      ([key, value]) =>
+        isNaN(Number(key)) && regex.test(value.toString())
+    )
+    .map(([key]) => key);
+};
