@@ -1,4 +1,3 @@
-// import BiMap from 'bidirectional-map';
 import { enumToBiMap } from './index';
 
 enum AUDIT_RESULT {
